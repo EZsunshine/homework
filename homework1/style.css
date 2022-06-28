@@ -8,34 +8,29 @@ td {
     text-align: center;
 }
 
-input {
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 500px;
-    height: 50px;
     border-radius: 50px;
     border: 2px solid #ccc;
+    padding: 5px 10px;
 }
 
-::placeholder {
-    font-size: 20px;
-    text-indent: 2em;
+input {
+    margin: 0 10px;
+    width: 100%;
+    border: none;
+    outline: none;
 }
 
 .search {
-    position: relative;
-}
-
-span.search {
-    position: absolute;
-    left: 10px;
-    top: 15px;
     font-size: 30px;
     color: gray;
 }
 
-span.mic {
-    position: absolute;
-    left: 460px;
-    top: 15px;
+.mic {
     font-size: 30px;
     color: red;
 }
