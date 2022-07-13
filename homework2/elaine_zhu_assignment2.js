@@ -5,25 +5,31 @@ const itemsObject = [
   { quantity: 5, price: 400 },
 ];
 
+const p1 = (arr) => {
+  return arr.map((item) => ({
+    quantity: item.quantity * 2,
+    price: item.price * 2,
+  }));
+};
+
+console.log(p1(itemsObject));
+
+const p2 = (arr) => {
+  return arr.filter((obj) => {
+    return obj.quantity > 2 && obj.price > 300;
+  });
+};
+
+console.log(p2(itemsObject));
+
+let totalQ = 0;
+let totalP = 0;
 itemsObject.forEach((obj) => {
-  obj.quantity *= 2;
-  obj.price *= 2;
-});
-
-console.log(itemsObject);
-
-let arr2 = itemsObject.filter((obj) => {
-  return obj.quantity > 2 && obj.price > 300;
-});
-
-console.log(arr2);
-
-itemsObject.forEach((obj) => {
-  let totalQ = 0;
-  let totalP = 0;
   totalQ += obj.quantity;
   totalP += obj.price;
 });
+console.log(totalQ);
+console.log(totalP);
 
 // 2
 const string =
