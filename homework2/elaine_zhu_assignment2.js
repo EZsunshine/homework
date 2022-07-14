@@ -6,9 +6,9 @@ const itemsObject = [
 ];
 
 const res1 = (arr) => {
-  return arr.map((item) => ({
-    quantity: item.quantity * 2,
-    price: item.price * 2,
+  return arr.map((obj) => ({
+    quantity: obj.quantity * 2,
+    price: obj.price * 2,
   }));
 };
 
@@ -22,14 +22,22 @@ const res2 = (arr) => {
 
 console.log(res2(itemsObject));
 
-let totalQ = 0;
-let totalP = 0;
-itemsObject.forEach((obj) => {
-  totalQ += obj.quantity;
-  totalP += obj.price;
-});
-console.log(totalQ);
-console.log(totalP);
+// let totalQ = 0;
+// let totalP = 0;
+// itemsObject.forEach((obj) => {
+//   totalQ += obj.quantity;
+//   totalP += obj.price;
+// });
+// console.log(totalQ);
+// console.log(totalP);
+
+const res3 = (arr) => {
+  return arr.reduce((acc, cur) => {
+    return acc + cur.quantity * cur.price;
+  }, 0);
+};
+
+console.log(res3(itemsObject));
 
 // 2
 const string =
