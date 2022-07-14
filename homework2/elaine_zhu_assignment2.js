@@ -91,7 +91,7 @@ console.log(arr);
 //   }
 // });
 
-// const sortedArray = Object.values(map).sort((left, right) => {
-//   return left.uuid - right.uuid;
+// const sortedArray = Object.values(map).sort((a, b) => {
+//   return a.uuid - b.uuid;
 // });
 // console.log(sortedArray);
