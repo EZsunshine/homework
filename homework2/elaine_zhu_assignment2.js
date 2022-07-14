@@ -5,22 +5,22 @@ const itemsObject = [
   { quantity: 5, price: 400 },
 ];
 
-const p1 = (arr) => {
+const res1 = (arr) => {
   return arr.map((item) => ({
     quantity: item.quantity * 2,
     price: item.price * 2,
   }));
 };
 
-console.log(p1(itemsObject));
+console.log(res1(itemsObject));
 
-const p2 = (arr) => {
+const res2 = (arr) => {
   return arr.filter((obj) => {
     return obj.quantity > 2 && obj.price > 300;
   });
 };
 
-console.log(p2(itemsObject));
+console.log(res2(itemsObject));
 
 let totalQ = 0;
 let totalP = 0;
@@ -38,7 +38,7 @@ let newString = string
   .toLowerCase()
   .replace(/[^a-zA-Z ]/g, "")
   .split(" ")
-  .join("");
+  .join(" ");
 console.log(newString);
 
 // 3
@@ -67,4 +67,23 @@ arr.forEach((obj) => {
 arr.sort((a, b) => {
   return a.uuid - b.uuid;
 });
+
 console.log(arr);
+
+// const map = {};
+// arr.forEach((ele) => {
+//   if (!map[ele.uuid]) {
+//     map[ele.uuid] = {
+//       uuid: ele.uuid,
+//       name: !ele.name ? null : ele.name,
+//       role: !ele.role ? null : ele.role,
+//     };
+//   } else {
+//     map[ele.uuid] = { ...map[ele.uuid], ...ele };
+//   }
+// });
+
+// const sortedArray = Object.values(map).sort((left, right) => {
+//   return left.uuid - right.uuid;
+// });
+// console.log(sortedArray);
